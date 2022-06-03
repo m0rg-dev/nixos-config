@@ -1,11 +1,9 @@
 { config, pkgs, ... }:
 
 {
-    imports = [ 
-        ./base.nix
-    ];
+  imports = [ ./base.nix ];
 
-    home.username = "morgan";
-    home.homeDirectory = "/home/morgan";
-    home.stateVersion = "21.11";
+  home.username = "morgan";
+  home.homeDirectory = "/home/morgan";
+  home.stateVersion = "21.11";
 }

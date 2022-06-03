@@ -1,15 +1,16 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [
-      ../modules/starship.nix
-      ../modules/emacs.nix
-  ];
+  imports =
+    [ ../modules/starship.nix ../modules/emacs.nix ../modules/tmux.nix ];
 
   options.globals = {
-    graphical = lib.mkOption { type = lib.types.bool; default = false; };
+    graphical = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
   };
-  
+
   config = {
     programs.home-manager.enable = true;
     nixpkgs.config.allowUnfree = true;

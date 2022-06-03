@@ -3,7 +3,8 @@
 {
   programs.emacs = {
     enable = true;
-    extraPackages = epkgs: with epkgs; [
+    extraPackages = epkgs:
+      with epkgs; [
         company
         diminish
         docker-compose-mode
@@ -23,9 +24,9 @@
         treemacs
         treemacs-projectile
         yasnippet
-    ];
+      ];
     package = if config.globals.graphical then pkgs.emacs else pkgs.emacs-nox;
   };
 
-  home.file.".emacs" = { text = (builtins.readFile ../configs/init.el ); };
+  home.file.".emacs" = { text = (builtins.readFile ../configs/init.el); };
 }

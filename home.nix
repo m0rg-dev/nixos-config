@@ -1,9 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
+  nixpkgs.config = { allowUnfree = true; };
 
   fonts.fontconfig.enable = true;
 
@@ -18,16 +16,11 @@
 
   programs.emacs = {
     enable = true;
-    extraPackages = epkgs: [
-      epkgs.use-package
-      epkgs.nix-mode
-    ];
+    extraPackages = epkgs: [ epkgs.use-package epkgs.nix-mode ];
     package = pkgs.emacs-nox;
   };
 
-  programs.firefox = {
-    enable = true;
-  };
+  programs.firefox = { enable = true; };
 
   programs.git = {
     enable = true;
@@ -35,21 +28,15 @@
     userEmail = "corp@m0rg.dev";
   };
 
-  programs.gh = {
-    enable = true;
-  };
+  programs.gh = { enable = true; };
 
-  programs.starship = {
-    enable = true;
-  };
+  programs.starship = { enable = true; };
 
   programs.zsh = {
     enable = true;
     enableSyntaxHighlighting = true;
     defaultKeymap = "emacs";
-    oh-my-zsh = {
-      enable = true;
-    };
+    oh-my-zsh = { enable = true; };
   };
 
   home.username = "morgan";
