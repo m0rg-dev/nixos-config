@@ -1,29 +1,35 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
-  programs.home-manager.enable = true;
-  nixpkgs.config.allowUnfree = true;
-
   imports = [
       ../modules/starship.nix
       ../modules/emacs.nix
   ];
 
-  home.packages =
-    [ pkgs.neofetch pkgs.rustup pkgs.ncurses pkgs.openssh pkgs.nixfmt ];
-
-  programs.git = {
-    enable = true;
-    userName = "Morgan Wolfe";
-    userEmail = "corp@m0rg.dev";
+  options.globals = {
+    graphical = lib.mkOption { type = lib.types.bool; default = false; };
   };
+  
+  config = {
+    programs.home-manager.enable = true;
+    nixpkgs.config.allowUnfree = true;
 
-  programs.gh = { enable = true; };
+    home.packages =
+      [ pkgs.neofetch pkgs.rustup pkgs.ncurses pkgs.openssh pkgs.nixfmt ];
 
-  programs.zsh = {
-    enable = true;
-    enableSyntaxHighlighting = true;
-    defaultKeymap = "emacs";
-    oh-my-zsh = { enable = true; };
+    programs.git = {
+      enable = true;
+      userName = "Morgan Wolfe";
+      userEmail = "corp@m0rg.dev";
+    };
+
+    programs.gh = { enable = true; };
+
+    programs.zsh = {
+      enable = true;
+      enableSyntaxHighlighting = true;
+      defaultKeymap = "emacs";
+      oh-my-zsh = { enable = true; };
+    };
   };
 }

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   programs.emacs = {
@@ -24,8 +24,8 @@
         treemacs-projectile
         yasnippet
     ];
-    package = pkgs.emacs-nox;
+    package = if config.globals.graphical then pkgs.emacs else pkgs.emacs-nox;
   };
 
-  home.file.".emacs" = { source = ../configs/init.el; };
+  home.file.".emacs" = { text = (builtins.readFile ../configs/init.el ); };
 }

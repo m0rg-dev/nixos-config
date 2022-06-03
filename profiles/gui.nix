@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = [ pkgs.discord pkgs.iosevka ];
-  programs.emacs.package = pkgs.emacs;
+  config = {
+    globals.graphical = true;
+    home.packages = [ pkgs.discord pkgs.iosevka ];
+  };
 }
