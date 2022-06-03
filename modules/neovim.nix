@@ -6,6 +6,7 @@
     plugins = with pkgs.vimPlugins; [
       nvim-lspconfig
       fugitive
+      vim-addon-nix
     ];
   };
 }
