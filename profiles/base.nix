@@ -6,6 +6,7 @@
     ../modules/emacs.nix
     ../modules/tmux.nix
     ../modules/rust.nix
+    ../modules/neovim.nix
   ];
 
   options.globals = {
