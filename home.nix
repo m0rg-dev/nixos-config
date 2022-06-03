@@ -13,6 +13,7 @@
     neofetch
     rustup
     ncurses
+    openssh
   ];
 
   programs.emacs = {
