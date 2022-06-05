@@ -17,6 +17,5 @@
       "rustfmt"
     ])
     pkgs.rust-analyzer
-		pkgs.gcc
   ];
 }

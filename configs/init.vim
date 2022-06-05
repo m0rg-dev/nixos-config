@@ -5,6 +5,7 @@ set shiftwidth=0
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 
+let g:solarized_termtrans=1
 colorscheme solarized
 
 lua <<EOF
@@ -95,3 +96,12 @@ nnoremap <silent> g[ <cmd>lua vim.diagnostic.goto_prev()<CR>
 nnoremap <silent> g] <cmd>lua vim.diagnostic.goto_next()<CR>
 
 set signcolumn=yes
+
+nnoremap <leader>ff <cmd>Telescope find_files<CR>
+nnoremap <leader>fg <cmd>Telescope live_grep<CR>
+nnoremap <leader>fb <cmd>Telescope buffers<CR>
+nnoremap <leader>fh <cmd>Telescope help_tags<CR>
+
+set number
+
+nnoremap <silent> <c-W>s <cmd>vsplit<CR>

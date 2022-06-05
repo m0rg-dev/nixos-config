@@ -2,3 +2,16 @@
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
+
+[nix_shell]
+format = 'via $symbol \($state\) '
+symbol = '❄️'
+
+[custom.lorri]
+command = "timeout 1 lorri internal stream-events --kind snapshot | jq -r --arg pwd \"$PWD\" 'if .[keys[0]].nix_file | startswith($pwd + \"/\") then {Completed: \"\", Started: \"⌛\", Failure: \"❌\"}[keys[0]] else \"\" end' "
+description = "Whether lorri has finished evaluation yet"
+format = "with [$symbol($output) ]($style)"
+shell = "sh"
+symbol = "🚛"
+when = "test -v IN_LORRI_SHELL"
+

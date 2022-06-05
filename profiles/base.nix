@@ -20,7 +20,15 @@
     programs.home-manager.enable = true;
     nixpkgs.config.allowUnfree = true;
 
-    home.packages = [ pkgs.neofetch pkgs.ncurses pkgs.openssh pkgs.nixfmt ];
+    home.packages = [
+			pkgs.daemonize
+      pkgs.direnv
+      pkgs.lorri
+      pkgs.ncurses
+      pkgs.neofetch
+      pkgs.nixfmt
+      pkgs.openssh
+    ];
 
     programs.git = {
       enable = true;
@@ -34,6 +42,11 @@
       enable = true;
       enableSyntaxHighlighting = true;
       defaultKeymap = "emacs";
+			initExtra = ''
+				export DIRENV_LOG_FORMAT=
+				eval "$(direnv hook zsh)"
+				daemonize $HOME/.nix-profile/bin/lorri daemon
+			'';
       oh-my-zsh = { enable = true; };
     };
   };
