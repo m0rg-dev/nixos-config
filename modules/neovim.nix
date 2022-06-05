@@ -10,6 +10,7 @@
       pkgs.ripgrep
     ];
     plugins = with pkgs.vimPlugins; [
+			vim-airline-themes
       airline
       cmp-buffer
       cmp-nvim-lsp

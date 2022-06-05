@@ -24,6 +24,7 @@
 			pkgs.daemonize
       pkgs.direnv
       pkgs.lorri
+			pkgs.htop
       pkgs.ncurses
       pkgs.neofetch
       pkgs.nixfmt
