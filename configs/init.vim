@@ -88,6 +88,7 @@ nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> ga    <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent> ff <cmd>lua vim.lsp.buf.formatting()<CR>
 
 set updatetime=300
 autocmd CursorHold * lua if vim.diagnostic then vim.diagnostic.open_float(nil, { focusable = false }) end
@@ -105,3 +106,4 @@ nnoremap <leader>fh <cmd>Telescope help_tags<CR>
 set number
 
 nnoremap <silent> <c-W>s <cmd>vsplit<CR>
+
