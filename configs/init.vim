@@ -90,7 +90,7 @@ nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> ga    <cmd>lua vim.lsp.buf.code_action()<CR>
 
 set updatetime=300
-autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+autocmd CursorHold * lua if vim.diagnostic then vim.diagnostic.open_float(nil, { focusable = false }) end
 
 nnoremap <silent> g[ <cmd>lua vim.diagnostic.goto_prev()<CR>
 nnoremap <silent> g] <cmd>lua vim.diagnostic.goto_next()<CR>
