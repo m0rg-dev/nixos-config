@@ -14,10 +14,10 @@
       type = lib.types.bool;
       default = false;
     };
-		git_email = lib.mkOption {
-			type = lib.types.str;
-			default = "corp@m0rg.dev";
-		};
+    git_email = lib.mkOption {
+      type = lib.types.str;
+      default = "corp@m0rg.dev";
+    };
   };
 
   config = {
@@ -25,11 +25,11 @@
     nixpkgs.config.allowUnfree = true;
 
     home.packages = [
-			pkgs.daemonize
+      pkgs.daemonize
       pkgs.direnv
-			pkgs.kubectl
+      pkgs.kubectl
       pkgs.lorri
-			pkgs.htop
+      pkgs.htop
       pkgs.ncurses
       pkgs.neofetch
       pkgs.nixfmt
@@ -38,11 +38,7 @@
 
     programs.git = {
       enable = true;
-			extraConfig = {
-			  pull = {
-				  rebase = true;
-				};
-			};
+      extraConfig = { pull = { rebase = true; }; };
       userName = "Morgan Wolfe";
       userEmail = config.globals.git_email;
     };
@@ -53,11 +49,11 @@
       enable = true;
       enableSyntaxHighlighting = true;
       defaultKeymap = "emacs";
-			initExtra = ''
-				export DIRENV_LOG_FORMAT=
-				eval "$(direnv hook zsh)"
-				daemonize $HOME/.nix-profile/bin/lorri daemon
-			'';
+      initExtra = ''
+        export DIRENV_LOG_FORMAT=
+        eval "$(direnv hook zsh)"
+        daemonize $HOME/.nix-profile/bin/lorri daemon
+      '';
       oh-my-zsh = { enable = true; };
     };
   };

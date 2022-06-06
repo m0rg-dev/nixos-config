@@ -6,11 +6,9 @@
     vimAlias = true;
     enable = true;
     extraConfig = builtins.readFile ../configs/init.vim;
-    extraPackages = [
-      pkgs.ripgrep
-    ];
+    extraPackages = [ pkgs.ripgrep ];
     plugins = with pkgs.vimPlugins; [
-			vim-airline-themes
+      vim-airline-themes
       airline
       cmp-buffer
       cmp-nvim-lsp
