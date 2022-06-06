@@ -33,6 +33,11 @@
 
     programs.git = {
       enable = true;
+			extraConfig = {
+			  pull = {
+				  rebase = true;
+				};
+			};
       userName = "Morgan Wolfe";
       userEmail = "corp@m0rg.dev";
     };
