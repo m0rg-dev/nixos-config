@@ -14,6 +14,10 @@
       type = lib.types.bool;
       default = false;
     };
+		git_email = lib.mkOption {
+			type = lib.types.str;
+			default = "corp@m0rg.dev";
+		};
   };
 
   config = {
@@ -40,7 +44,7 @@
 				};
 			};
       userName = "Morgan Wolfe";
-      userEmail = "corp@m0rg.dev";
+      userEmail = config.globals.git_email;
     };
 
     programs.gh = { enable = true; };

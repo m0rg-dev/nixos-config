@@ -1,7 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [ ./base.nix ];
+
+	globals.git_email = lib.removeSuffix "\n" (builtins.readFile /home/morgan/git-email);
 
   home.username = "morgan";
   home.homeDirectory = "/home/morgan";
