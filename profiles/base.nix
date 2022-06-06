@@ -23,6 +23,7 @@
     home.packages = [
 			pkgs.daemonize
       pkgs.direnv
+			pkgs.kubectl
       pkgs.lorri
 			pkgs.htop
       pkgs.ncurses

@@ -55,6 +55,10 @@ local opts = {
 }
 
 require('rust-tools').setup(opts)
+
+nvim_lsp.gopls.setup{
+  cmd = { "gopls", "serve" },
+}
 EOF
 
 lua <<EOF
