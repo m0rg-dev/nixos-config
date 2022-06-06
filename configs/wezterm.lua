@@ -1,8 +1,8 @@
 local wezterm = require 'wezterm'
 
 local scheme = wezterm.get_builtin_color_schemes()["Builtin Solarized Dark"]
-scheme.brights[1] = "#073642"
-scheme.ansi[1] = "#002b36"
+-- scheme.brights[1] = "#073642"
+-- scheme.ansi[1] = "#002b36"
 scheme.indexed = {}
 
 local opts = {
