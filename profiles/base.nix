@@ -39,6 +39,7 @@
       pkgs.neofetch
       pkgs.nixfmt
       pkgs.openssh
+			pkgs.ripgrep
     ];
 
     programs.git = {
