@@ -7,6 +7,7 @@
     ../modules/tmux.nix
     ../modules/rust.nix
     ../modules/neovim.nix
+		../modules/wezterm.nix
   ];
 
   options.globals = {
@@ -18,6 +19,10 @@
       type = lib.types.str;
       default = "corp@m0rg.dev";
     };
+		wsl2 = lib.mkOption {
+			type = lib.types.bool;
+			default = false;
+		};
   };
 
   config = {

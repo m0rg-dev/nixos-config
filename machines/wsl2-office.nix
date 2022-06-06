@@ -6,6 +6,8 @@
   globals.git_email =
     lib.removeSuffix "\n" (builtins.readFile /home/morgan/git-email);
 
+	globals.wsl2 = true;
+
   home.username = "morgan";
   home.homeDirectory = "/home/morgan";
   home.stateVersion = "21.11";
