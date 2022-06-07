@@ -5,7 +5,6 @@ set shiftwidth=0
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 
-let g:solarized_termtrans=1
 colorscheme solarized
 
 lua <<EOF
@@ -55,6 +54,10 @@ local opts = {
 }
 
 require('rust-tools').setup(opts)
+
+nvim_lsp.gopls.setup{
+  cmd = { "gopls", "serve" },
+}
 EOF
 
 lua <<EOF
