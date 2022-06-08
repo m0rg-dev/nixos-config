@@ -12,7 +12,7 @@
   home.homeDirectory = "/home/morgan";
   home.stateVersion = "21.11";
 
-  home.packages = [ pkgs.awscli2 pkgs.gopls ];
+  home.packages = [ pkgs.awscli2 pkgs.docker pkgs.docker-compose pkgs.gopls ];
 
   programs.git = { extraConfig = { commit = { gpgsign = false; }; }; };
 
