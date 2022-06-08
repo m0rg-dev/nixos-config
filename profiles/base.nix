@@ -35,6 +35,7 @@
       pkgs.kubectl
       pkgs.lorri
       pkgs.htop
+			pkgs.jq
       pkgs.ncurses
       pkgs.neofetch
       pkgs.nixfmt
