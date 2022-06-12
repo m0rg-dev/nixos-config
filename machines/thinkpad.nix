@@ -8,4 +8,6 @@
   home.stateVersion = "21.11";
 
   home.file.".emacs".text = "(defvar font-height 100)";
+
+	home.packages = [ pkgs.gnucash ];
 }
