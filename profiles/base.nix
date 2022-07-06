@@ -29,6 +29,7 @@
     nixpkgs.config.allowUnfree = true;
 
     home.packages = [
+			pkgs.bat
       pkgs.daemonize
       pkgs.direnv
       pkgs.kubectl
@@ -38,6 +39,7 @@
       pkgs.ncurses
       pkgs.neofetch
       pkgs.nixfmt
+			pkgs.onefetch
       pkgs.openssh
 			pkgs.ripgrep
     ];
