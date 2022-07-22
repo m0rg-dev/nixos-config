@@ -8,4 +8,8 @@
   home.username = "morgan";
   home.homeDirectory = "/home/morgan";
   home.stateVersion = "21.11";
+	
+	home.packages = [
+		pkgs.util-linux
+	];
 }
