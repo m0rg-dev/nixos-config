@@ -31,6 +31,7 @@
 
     home.packages = [
       pkgs.bat
+      pkgs.btop
       pkgs.daemonize
       pkgs.direnv
       pkgs.file
