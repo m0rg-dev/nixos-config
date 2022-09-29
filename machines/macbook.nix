@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./base.nix ];
+  imports = [ ./base.nix ../profiles/osx.nix ];
 
   home.username = "morgan";
   home.homeDirectory = "/Users/morgan";

@@ -43,6 +43,7 @@
       pkgs.jq
       pkgs.ncurses
       pkgs.neofetch
+			pkgs.nix-index
       pkgs.nixfmt
       pkgs.onefetch
       pkgs.openssh
