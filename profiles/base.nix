@@ -31,6 +31,7 @@
     nixpkgs.config.allowUnfree = true;
 
     home.packages = [
+      pkgs.awscli2
       pkgs.bat
       pkgs.btop
       pkgs.daemonize
