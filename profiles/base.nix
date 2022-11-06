@@ -37,6 +37,7 @@
       pkgs.daemonize
       pkgs.direnv
       pkgs.file
+      pkgs.gnupg
       pkgs.kubectl
       pkgs.libarchive # for bsdtar
       pkgs.lorri
@@ -54,6 +55,7 @@
 
     programs.git = {
       enable = true;
+      lfs.enable = true;
       extraConfig = { pull = { rebase = true; }; };
       userName = "Morgan Wolfe";
       userEmail = config.globals.git_email;
