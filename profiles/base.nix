@@ -7,7 +7,6 @@
     ../modules/tmux.nix
     ../modules/rust.nix
     ../modules/neovim.nix
-    ../modules/nushell.nix
     ../modules/wezterm.nix
   ];
 
@@ -71,8 +70,6 @@
         export DIRENV_LOG_FORMAT=
         eval "$(direnv hook zsh)"
         daemonize $HOME/.nix-profile/bin/lorri daemon
-
-        exec nu
       '';
       oh-my-zsh = { enable = true; };
     };
