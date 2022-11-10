@@ -1,13 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [ ./base.nix ../profiles/osx.nix ];
 
-  home.packages = [
-    pkgs.awscli2
-    pkgs.gopls
-    pkgs.postman
-  ];
+  home.packages = [ pkgs.awscli2 pkgs.gopls pkgs.postman ];
 
   programs.go = {
     enable = true;
@@ -22,6 +18,9 @@
       golang.go
     ];
   };
+
+  globals.git_email =
+    lib.removeSuffix "\n" (builtins.readFile /Users/morgan/git-email);
 
   home.username = "morgan";
   home.homeDirectory = "/Users/morgan";
