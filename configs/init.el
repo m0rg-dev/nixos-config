@@ -14,8 +14,9 @@
 (global-company-mode 1)
 (yas-global-mode 1)
 (projectile-mode 1)
-(helm-mode 1)
+;; (helm-mode 1)
 (lsp-treemacs-sync-mode 1)
+(global-git-gutter-mode +1)
 
 (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
@@ -25,12 +26,13 @@
 
 (diminish 'yas-minor-mode)
 (diminish 'company-mode)
-(diminish 'helm-mode)
+;; (diminish 'helm-mode)
 (diminish 'eldoc-mode)
 
 (require 'lsp-mode)
 (add-hook 'rust-mode-hook #'lsp)
 (add-hook 'go-mode-hook #'lsp)
+(add-hook 'go-mode-hook (lambda () (setq tab-width 4)))
 
 (require 'display-line-numbers)
 
@@ -95,11 +97,11 @@ Exempt major modes are defined in `display-line-numbers-exempt-modes'."
 
 (defun color (sym) "Get SYM out of named-colors (shorthand)." (alist-get sym named-colors))
 
-(defvar font-height 160)
+(defvar font-height 120)
 
 (face-spec-set 'default `(
-			  (((background light)) (:foreground ,(color :base00) :background ,(color :base3) :family "Iosevka" :height ,font-height))
-			  (((background dark)) (:foreground ,(color :base0) :background ,(color :base03) :family "Iosevka" :height ,font-height))
+			  (((background light)) (:foreground ,(color :base00) :background ,(color :base3) :family "JetBrains Mono" :height ,font-height))
+			  (((background dark)) (:foreground ,(color :base0) :background ,(color :base03) :family "JetBrains Mono" :height ,font-height))
 			  ))
 
 (defun face (name &rest args) "Set face NAME's default face spec to ARGS across all terminal types."

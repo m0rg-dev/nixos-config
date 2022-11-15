@@ -6,6 +6,7 @@
     ];
 
     config = {
+        globals.graphical = true;
         home.packages = [
             pkgs.iterm2
         ];

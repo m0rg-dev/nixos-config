@@ -10,8 +10,8 @@
         docker-compose-mode
         dockerfile-mode
         flycheck
+        git-gutter
         go-mode
-        helm
         lsp-mode
         lsp-treemacs
         lsp-ui
