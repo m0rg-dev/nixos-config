@@ -14,6 +14,7 @@
       cmp-nvim-lsp
       cmp-path
       cmp-vsnip
+			ctrlp-vim
       fugitive
       lsp-status-nvim
       nvim-autopairs
@@ -22,7 +23,6 @@
       plenary-nvim
       popup-nvim
       rust-tools-nvim
-      telescope-nvim
       vim-addon-nix
       vim-colors-solarized
       vim-vsnip

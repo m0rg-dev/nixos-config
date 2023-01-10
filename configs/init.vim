@@ -39,28 +39,23 @@ let g:airline_symbols.linenr = ''
 lua <<EOF
 local nvim_lsp = require 'lspconfig'
 
-local opts = {
-	tools = {
-		autoSetHints = true,
-		hover_with_actions = true,
-	},
-	server = {
-		settings = {
-			["rust-analyzer"] = {
-				checkOnSave = { command = "clippy" }
-			}
-		}
-	},
-}
-
-require('rust-tools').setup(opts)
-
 nvim_lsp.gopls.setup{
-  cmd = { "gopls", "serve" },
+  cmd = { "gopls", "serve" }
 }
-EOF
 
-lua <<EOF
+local rt = require("rust-tools")
+
+rt.setup({
+  server = {
+    on_attach = function(_, bufnr)
+      -- Hover actions
+      vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+      -- Code action groups
+      vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+    end,
+  },
+})
+
 local cmp = require 'cmp'
 
 cmp.setup({
@@ -122,7 +117,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
 
-local servers = { 'rust_analyzer', 'gopls' }
+local servers = { 'gopls' }
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
@@ -137,15 +132,7 @@ EOF
 set updatetime=300
 autocmd CursorHold * lua if vim.diagnostic then vim.diagnostic.open_float(nil, { focusable = false }) end
 
-nnoremap <silent> g[ <cmd>lua vim.diagnostic.goto_prev()<CR>
-nnoremap <silent> g] <cmd>lua vim.diagnostic.goto_next()<CR>
-
 set signcolumn=yes
-
-nnoremap <leader>ff <cmd>Telescope find_files<CR>
-nnoremap <leader>fg <cmd>Telescope live_grep<CR>
-nnoremap <leader>fb <cmd>Telescope buffers<CR>
-nnoremap <leader>fh <cmd>Telescope help_tags<CR>
 
 set number
 

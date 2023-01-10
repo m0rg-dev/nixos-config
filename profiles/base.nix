@@ -2,12 +2,12 @@
 
 {
   imports = [
-    ../modules/emacs.nix
+    # ../modules/emacs.nix
     ../modules/starship.nix
-    ../modules/tmux.nix
+    # ../modules/tmux.nix
     ../modules/rust.nix
     ../modules/neovim.nix
-    ../modules/wezterm.nix
+    # ../modules/wezterm.nix
   ];
 
   options.globals = {
