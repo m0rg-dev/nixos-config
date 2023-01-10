@@ -25,6 +25,7 @@
       rust-tools-nvim
       vim-addon-nix
       vim-colors-solarized
+			vim-gitgutter
       vim-vsnip
     ];
   };

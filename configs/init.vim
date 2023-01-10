@@ -6,6 +6,7 @@ set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 
 colorscheme solarized
+highlight! link SignColumn LineNr
 
 lua <<EOF
 local lsp_status = require('lsp-status')
