@@ -134,6 +134,7 @@ set updatetime=300
 autocmd CursorHold * lua if vim.diagnostic then vim.diagnostic.open_float(nil, { focusable = false }) end
 
 set signcolumn=yes
+set laststatus=3
 
 set number
 
