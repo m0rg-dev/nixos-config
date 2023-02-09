@@ -3,7 +3,7 @@
 {
   imports = [ ./base.nix ../profiles/osx.nix ];
 
-  home.packages = [ pkgs.awscli2 pkgs.gopls pkgs.postman ];
+  home.packages = [ pkgs.awscli2 pkgs.gopls pkgs.postman pkgs.terraform ];
 
   programs.go = {
     enable = true;
