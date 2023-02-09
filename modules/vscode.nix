@@ -7,6 +7,8 @@
       bbenoist.nix
       arrterian.nix-env-selector
       rust-lang.rust-analyzer
+      hashicorp.terraform
+      stkb.rewrap
     ];
   };
 }

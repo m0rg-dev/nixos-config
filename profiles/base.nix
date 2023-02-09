@@ -1,14 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [
-    # ../modules/emacs.nix
-    ../modules/starship.nix
-    # ../modules/tmux.nix
-    ../modules/rust.nix
-    ../modules/neovim.nix
-    # ../modules/wezterm.nix
-  ];
+  imports = [ ../modules/git.nix ../modules/starship.nix ../modules/rust.nix ];
 
   options.globals = {
     graphical = lib.mkOption {
@@ -44,21 +37,13 @@
       pkgs.jq
       pkgs.ncurses
       pkgs.neofetch
-			pkgs.nix-index
+      pkgs.nix-index
       pkgs.nixfmt
       pkgs.onefetch
       pkgs.openssh
       pkgs.ripgrep
       pkgs.tokei
     ];
-
-    programs.git = {
-      enable = true;
-      lfs.enable = true;
-      extraConfig = { pull = { rebase = true; }; };
-      userName = "Morgan Wolfe";
-      userEmail = config.globals.git_email;
-    };
 
     programs.gh = { enable = true; };
 

@@ -14,7 +14,7 @@
       cmp-nvim-lsp
       cmp-path
       cmp-vsnip
-			ctrlp-vim
+      ctrlp-vim
       fugitive
       lsp-status-nvim
       nvim-autopairs
@@ -25,7 +25,7 @@
       rust-tools-nvim
       vim-addon-nix
       vim-colors-solarized
-			vim-gitgutter
+      vim-gitgutter
       vim-vsnip
     ];
   };

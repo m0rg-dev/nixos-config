@@ -3,9 +3,7 @@
 {
   imports = [ ./base.nix ../profiles/osx.nix ];
 
-  home.packages = [
-    pkgs.ffmpeg
-  ];
+  home.packages = [ pkgs.ffmpeg ];
 
   home.username = "morgan";
   home.homeDirectory = "/Users/morgan";

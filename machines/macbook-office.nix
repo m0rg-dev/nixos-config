@@ -7,16 +7,12 @@
 
   programs.go = {
     enable = true;
-    package = pkgs.go_1_19;
+    package = pkgs.go_1_20;
   };
 
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [
-      bbenoist.nix
-      arrterian.nix-env-selector
-      golang.go
-    ];
+    extensions = with pkgs.vscode-extensions; [ golang.go ];
   };
 
   globals.git_email =
