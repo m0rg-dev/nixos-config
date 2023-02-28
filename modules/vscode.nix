@@ -20,6 +20,10 @@
       "rust-analyzer.check.command" = "clippy";
       "editor.fontFamily" = "'Berkeley Mono', Menlo, Monaco, 'Courier New', monospace";
       "workbench.colorTheme" = "Kimbie Dark";
+      "editor.tabSize" = 2;
+      "editor.renderLineHighlight" = "gutter";
+      "editor.lineHeight" = 1.1;
+      "editor.fontSize" = 14;
     };
   };
 }

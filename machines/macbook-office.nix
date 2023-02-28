@@ -13,6 +13,9 @@
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [ golang.go ];
+    userSettings = {
+      "window.zoomLevel" = -1;
+    };
   };
 
   globals.git_email =
