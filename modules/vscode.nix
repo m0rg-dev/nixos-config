@@ -6,6 +6,7 @@
     extensions = with pkgs.vscode-extensions; [
       arrterian.nix-env-selector
       bbenoist.nix
+      dbaeumer.vscode-eslint
       hashicorp.terraform
       rust-lang.rust-analyzer
       stkb.rewrap
@@ -18,7 +19,8 @@
       "html.autoClosingTags" = false;
       "rust-analyzer.checkOnSave" = true;
       "rust-analyzer.check.command" = "clippy";
-      "editor.fontFamily" = "'Berkeley Mono', Menlo, Monaco, 'Courier New', monospace";
+      "editor.fontFamily" =
+        "'Berkeley Mono', Menlo, Monaco, 'Courier New', monospace";
       "workbench.colorTheme" = "Kimbie Dark";
       "editor.tabSize" = 2;
       "editor.renderLineHighlight" = "gutter";
