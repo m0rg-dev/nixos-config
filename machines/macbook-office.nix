@@ -3,7 +3,14 @@
 {
   imports = [ ./base.nix ../profiles/osx.nix ];
 
-  home.packages = [ pkgs.awscli2 pkgs.gopls pkgs.postman pkgs.terraform ];
+  home.packages = [
+    pkgs.awscli2
+    pkgs.gopls
+    pkgs.golangci-lint
+    pkgs.gosec
+    pkgs.postman
+    pkgs.terraform
+  ];
 
   programs.go = {
     enable = true;
@@ -13,9 +20,7 @@
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [ golang.go ];
-    userSettings = {
-      "window.zoomLevel" = -1;
-    };
+    userSettings = { "window.zoomLevel" = -1; };
   };
 
   globals.git_email =
