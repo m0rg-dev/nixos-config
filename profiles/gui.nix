@@ -1,9 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ ../modules/vscode.nix ];
+
   config = {
     globals.graphical = true;
     home.packages =
-      [ pkgs.discord pkgs.firefox pkgs.iosevka pkgs.gnome3.gnome-tweaks ];
+      [ pkgs.alacritty pkgs.discord ];
   };
 }

@@ -24,8 +24,8 @@
       "workbench.colorTheme" = "Solarized Dark";
       "editor.tabSize" = 2;
       "editor.renderLineHighlight" = "gutter";
-      "editor.lineHeight" = 1.1;
-      "editor.fontSize" = 14;
+      "editor.lineHeight" = 1.2;
+      "editor.fontSize" = 15;
       "update.mode" = "none";
       "extensions.autoCheckUpdates" = false;
       "extensions.ignoreRecommendations" = true;
