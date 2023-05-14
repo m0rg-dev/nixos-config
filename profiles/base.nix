@@ -1,7 +1,12 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ../modules/git.nix ../modules/starship.nix ../modules/rust.nix ];
+  imports = [
+    ../modules/git.nix
+    ../modules/starship.nix
+    ../modules/rust.nix
+    ../modules/tmux.nix
+  ];
 
   options.globals = {
     graphical = lib.mkOption {
