@@ -54,7 +54,7 @@
 
     programs.zsh = {
       enable = true;
-      enableSyntaxHighlighting = true;
+      syntaxHighlighting.enable = true;
       defaultKeymap = "emacs";
       initExtra = ''
         export DIRENV_LOG_FORMAT=

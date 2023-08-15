@@ -15,3 +15,5 @@ shell = "sh"
 symbol = "🚛"
 when = "test -v IN_LORRI_SHELL"
 
+[battery]
+disabled = true

@@ -8,6 +8,7 @@
       bbenoist.nix
       dbaeumer.vscode-eslint
       hashicorp.terraform
+      ms-vscode-remote.remote-ssh
       rust-lang.rust-analyzer
       stkb.rewrap
       tamasfe.even-better-toml
