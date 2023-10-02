@@ -33,6 +33,7 @@
 (add-hook 'rust-mode-hook #'lsp)
 (add-hook 'go-mode-hook #'lsp)
 (add-hook 'go-mode-hook (lambda () (setq tab-width 4)))
+(add-hook 'python-mode-hook (lambda () (require 'lsp-pyright) (lsp)))
 
 (require 'display-line-numbers)
 

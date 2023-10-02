@@ -13,6 +13,7 @@
         git-gutter
         go-mode
         lsp-mode
+        lsp-pyright
         lsp-treemacs
         lsp-ui
         magit

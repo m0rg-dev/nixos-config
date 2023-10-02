@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ../modules/vscode.nix ];
+  imports = [ ../modules/vscode.nix ../modules/emacs.nix ];
 
   config = {
     globals.graphical = true;

@@ -4,10 +4,12 @@
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [
-      arrterian.nix-env-selector
       bbenoist.nix
       dbaeumer.vscode-eslint
       hashicorp.terraform
+      mkhl.direnv
+      ms-python.isort
+      ms-python.python
       ms-vscode-remote.remote-ssh
       rust-lang.rust-analyzer
       stkb.rewrap
