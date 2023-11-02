@@ -29,6 +29,7 @@
       "editor.renderLineHighlight" = "gutter";
       "editor.lineHeight" = 1.2;
       "editor.fontSize" = 15;
+      "editor.minimap.enabled" = false;
       "update.mode" = "none";
       "extensions.autoCheckUpdates" = false;
       "extensions.ignoreRecommendations" = true;
