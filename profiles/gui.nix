@@ -5,7 +5,6 @@
 
   config = {
     globals.graphical = true;
-    home.packages =
-      [ pkgs.alacritty pkgs.discord ];
+    home.packages = [ pkgs.alacritty pkgs.discord ];
   };
 }

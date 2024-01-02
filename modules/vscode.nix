@@ -17,22 +17,23 @@
       usernamehw.errorlens
     ];
     userSettings = {
-      "editor.formatOnSave" = true;
-      "html.autoCreateQuotes" = false;
-      "html.autoClosingTags" = false;
-      "rust-analyzer.checkOnSave" = true;
-      "rust-analyzer.check.command" = "clippy";
+      "editor.cursorStyle" = "underline";
       "editor.fontFamily" =
-        "'Berkeley Mono', Menlo, Monaco, 'Courier New', monospace";
-      "workbench.colorTheme" = "Solarized Dark";
-      "editor.tabSize" = 2;
-      "editor.renderLineHighlight" = "gutter";
-      "editor.lineHeight" = 1.2;
-      "editor.fontSize" = 15;
+        "'Fixedsys Excelsior', Menlo, Monaco, 'Courier New', monospace";
+      "editor.fontSize" = 16;
+      "editor.formatOnSave" = true;
+      "editor.lineHeight" = 1.0;
       "editor.minimap.enabled" = false;
-      "update.mode" = "none";
+      "editor.renderLineHighlight" = "gutter";
+      "editor.tabSize" = 2;
       "extensions.autoCheckUpdates" = false;
       "extensions.ignoreRecommendations" = true;
+      "html.autoClosingTags" = false;
+      "html.autoCreateQuotes" = false;
+      "rust-analyzer.check.command" = "clippy";
+      "rust-analyzer.checkOnSave" = true;
+      "update.mode" = "none";
+      "workbench.colorTheme" = "Monokai Dimmed";
     };
   };
 }
