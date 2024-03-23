@@ -19,8 +19,9 @@
     userSettings = {
       "editor.cursorStyle" = "underline";
       "editor.fontFamily" =
-        "'Fixedsys Excelsior', Menlo, Monaco, 'Courier New', monospace";
-      "editor.fontSize" = 16;
+        "'Berkeley Mono', Menlo, Monaco, 'Courier New', monospace";
+      "editor.fontLigatures" = true;
+      "editor.fontSize" = 15;
       "editor.formatOnSave" = true;
       "editor.lineHeight" = 1.0;
       "editor.minimap.enabled" = false;
